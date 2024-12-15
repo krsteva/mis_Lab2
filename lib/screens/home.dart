@@ -35,12 +35,12 @@ class _HomeState extends State<Home> {
         actions: [
           IconButton(
             icon: const Icon(Icons.casino, color: Colors.white),
-            onPressed: () => Navigator.pushNamed(context, '/random'),  // Navigate to random joke page
+            onPressed: () => Navigator.pushNamed(context, '/random'),
           ),
         ],
       ),
       body: jokeTypes.isEmpty
-          ? const Center(child: CircularProgressIndicator())  // Show loading spinner
+          ? const Center(child: CircularProgressIndicator())
           : GridView.builder(
         padding: const EdgeInsets.all(16),
         gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
@@ -52,15 +52,14 @@ class _HomeState extends State<Home> {
         itemBuilder: (context, index) {
           return GestureDetector(
             onTap: () {
-              // When tapped, navigate to jokes screen for the selected type
               Navigator.pushNamed(
                 context,
                 '/jokesByType',
-                arguments: jokeTypes[index],  // Pass the joke type as argument
+                arguments: jokeTypes[index],
               );
             },
             child: JokeCard(
-              type: jokeTypes[index], // Joke type passed to the JokeCard widget
+              type: jokeTypes[index],
             ),
           );
         },

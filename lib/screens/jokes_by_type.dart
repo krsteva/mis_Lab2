@@ -32,7 +32,7 @@ class _JokesByTypePageState extends State<JokesByTypePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(type),  // Display type name in the app bar
+        title: Text(type),
       ),
       body: jokes.isEmpty
           ? const Center(child: CircularProgressIndicator())

@@ -14,7 +14,7 @@ class JokeCard extends StatelessWidget {
         child: Padding(
           padding: const EdgeInsets.all(16.0),
           child: Text(
-            type,  // Display joke type
+            type,
             style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
           ),
         ),

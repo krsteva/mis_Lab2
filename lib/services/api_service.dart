@@ -28,7 +28,6 @@ class ApiService {
     final response = await http.get(Uri.parse("https://official-joke-api.appspot.com/random_joke"));
 
     if (response.statusCode == 200) {
-      // Return the JSON decoded response as a Map<String, dynamic>
       return jsonDecode(response.body);
     } else {
       throw Exception("Failed to load random joke");

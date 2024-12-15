@@ -24,7 +24,6 @@ class _RandomJokePageState extends State<RandomJokePage> {
         randomJoke = joke;
       });
     } catch (e) {
-      // Handle error here, for example:
       print("Error fetching random joke: $e");
     }
   }
@@ -37,7 +36,7 @@ class _RandomJokePageState extends State<RandomJokePage> {
         backgroundColor: Colors.blue,
       ),
       body: randomJoke.isEmpty
-          ? const Center(child: CircularProgressIndicator())  // Show loading spinner
+          ? const Center(child: CircularProgressIndicator())
           : Padding(
         padding: const EdgeInsets.all(16.0),
         child: Column(
